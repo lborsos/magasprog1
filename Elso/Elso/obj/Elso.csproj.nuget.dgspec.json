@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\Elso.csproj": {}
+  },
+  "projects": {
+    "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\Elso.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\Elso.csproj",
+        "projectName": "Elso",
+        "projectPath": "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\Elso.csproj",
+        "packagesPath": "C:\\Users\\Laci\\.nuget\\packages\\",
+        "outputPath": "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Laci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
