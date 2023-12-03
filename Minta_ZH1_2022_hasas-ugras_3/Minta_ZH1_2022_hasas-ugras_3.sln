@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minta_ZH1_2022_hasas-ugras_3", "Minta_ZH1_2022_hasas-ugras_3\Minta_ZH1_2022_hasas-ugras_3.csproj", "{7DE4A0F9-1270-49CB-9D7B-E189717BF31E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DE4A0F9-1270-49CB-9D7B-E189717BF31E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE4A0F9-1270-49CB-9D7B-E189717BF31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE4A0F9-1270-49CB-9D7B-E189717BF31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE4A0F9-1270-49CB-9D7B-E189717BF31E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4F365EF-88C8-41DA-AD38-C869C41A30DE}
+	EndGlobalSection
+EndGlobal

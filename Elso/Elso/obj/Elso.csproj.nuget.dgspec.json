@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\Elso.csproj": {}
+    "F:\\Laci_Work\\CSharp\\Eger\\Magasprog1\\Elso\\Elso\\Elso.csproj": {}
   },
   "projects": {
-    "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\Elso.csproj": {
+    "F:\\Laci_Work\\CSharp\\Eger\\Magasprog1\\Elso\\Elso\\Elso.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\Elso.csproj",
+        "projectUniqueName": "F:\\Laci_Work\\CSharp\\Eger\\Magasprog1\\Elso\\Elso\\Elso.csproj",
         "projectName": "Elso",
-        "projectPath": "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\Elso.csproj",
+        "projectPath": "F:\\Laci_Work\\CSharp\\Eger\\Magasprog1\\Elso\\Elso\\Elso.csproj",
         "packagesPath": "C:\\Users\\Laci\\.nuget\\packages\\",
-        "outputPath": "F:\\Laci_Work\\CSharp\\Eger\\Elso\\Elso\\obj\\",
+        "outputPath": "F:\\Laci_Work\\CSharp\\Eger\\Magasprog1\\Elso\\Elso\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Laci\\AppData\\Roaming\\NuGet\\NuGet.Config",
