@@ -163,6 +163,7 @@ namespace Minta_ZH2_2021_2022
             }
 
             // 10
+            Console.WriteLine("\nEgyedi kategoriak listaja ami a maximum imdb szamot tartalmazza:");
             kategoriak.Clear(); // felhasznalom a mar letezo listat!
             foreach (Film film in filmek) foreach (string kateg in film.kategoria) if (!kategoriak.Contains(kateg)) kategoriak.Add(kateg);
             
