@@ -139,15 +139,16 @@ namespace Minta_ZH2_2021_2022
 
             // Denis Villeneuve
 
-            Console.WriteLine("Add meg a legfiatalabb eletkorat: ");
+            // 9
+            Console.Write("Add meg a legfiatalabb eletkorat: ");
             int eletkor = int.Parse(Console.ReadLine());
             List<string> kategoriak = kategoriakBeolvasasa();
             Console.Write("0 - felirat nelkul; barmi mas - felirattal, valassz (0, ...): ");
-            int felirat = int.Parse(Console.ReadLine());
+            string felirat = Console.ReadLine();
             foreach (Film film in filmek)
             {
                 bool talalat = false;
-                if (film.korhatar >= eletkor && film.feliratos == (felirat != 0))
+                if (film.korhatar >= eletkor && film.feliratos == (felirat != "0"))
                 {
                     foreach (string kateg in film.kategoria)
                     {
@@ -161,6 +162,24 @@ namespace Minta_ZH2_2021_2022
                 if (talalat) Console.WriteLine("{0}", film.cim);
             }
 
+            // 10
+            kategoriak.Clear(); // felhasznalom a mar letezo listat!
+            foreach (Film film in filmek) foreach (string kateg in film.kategoria) if (!kategoriak.Contains(kateg)) kategoriak.Add(kateg);
+            
+            // foreach (Film film in filmek) foreach (string kateg in film.kategoria) kategoriak.Add(kateg);
+            // kategoriak.Distinct();
+
+            // foreach (var item in kategoriak) Console.WriteLine(item);
+
+            foreach (string kategoria in kategoriak)
+            {
+                Film filmTmp = new Film();
+                foreach (Film film in filmek)
+                {
+                    if (film.kategoria.Contains(kategoria) && filmTmp.imdb < film.imdb) filmTmp = film;
+                }
+                if (filmTmp.imdb > 0) Console.WriteLine("{0} - maximum imdb: {1}", kategoria, filmTmp.imdb);
+            }
 
             Console.ReadLine();
         }
