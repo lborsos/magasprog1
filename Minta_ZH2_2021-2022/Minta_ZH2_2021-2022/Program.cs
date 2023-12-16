@@ -234,7 +234,7 @@ namespace Minta_ZH2_2021_2022
 
         static void readCsvAndFillFilmek(List<Film> filmek)
         {
-            StreamReader sr = new StreamReader("ZH2_2021_22 - input.csv", Encoding.Default);
+            StreamReader sr = new StreamReader("../../ZH2_2021_22 - input.csv", Encoding.Default);
             while (!sr.EndOfStream)
             {
                 string sor = sr.ReadLine();
