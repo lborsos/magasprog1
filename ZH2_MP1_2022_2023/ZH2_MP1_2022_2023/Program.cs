@@ -136,7 +136,7 @@ namespace ZH2_MP1_2022_2023
                     db++;
                     osszArBF += laptop.ar;
                 }
-            Console.WriteLine("A fenti laptopok adtlagos ara: {0}\n", osszArBF / db);
+            Console.WriteLine("A fenti laptopok adtlagos ara: {0}\n", Math.Round((double)osszArBF / db));
 
             Console.Write("Gyarto: ");
             string gyarto = Console.ReadLine();

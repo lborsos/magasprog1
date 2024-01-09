@@ -1,4 +1,124 @@
-﻿using System;
+﻿/*
+A kedvenc online menzánk minden héten közzé teszi az elkövetkezendő heti ételeket,
+amelyeket az ügyfelei rendelhetnek. Az Ön feladata beolvasni és eltárolni a jövő heti
+ételek adatait, majd az egyes feladatokban megfogalmazott lekérdezéseket és feladatokat
+implementálni.
+A mellékelt MP1_2023_24_ZH2_input.csv input fájl minden sorában egy-egy
+étel adatait találja pontosvesszővel elválasztva egymástól az alábbi struktúrában.
+--------------------------------------------------------------------------------
+Étel neve 					szöveg
+Kategória 					szöveg (leves, saláta, rántott, . . . )
+Adag 						normál vagy kicsi
+Tömeg (g) 					egész szám
+Melyik nap rendelhető 		dátum yyyy.MM.dd formátumban
+Allergének 					szöveg (többet is tartalmazhat vesszővel elválasztva)
+Energia (kcal/100 g) 		egész szám
+Ár 							egész szám
+--------------------------------------------------------------------------------
+
+1. Feladat. Az input fájl beolvasását az alábbiak szerint végezze el!
+a) Készítsen osztályt, mely a fájlban található ételek tárolására alkalmas!
+b) Azt, hogy az étel normál adag-e logikai típusú változóban tárolja!
+c) Készítsen listát, mely az osztály példányainak tárolására alkalmas!
+d) Olvassa be az MP1_2023_24_ZH2_input.csv fájl-t, és a soronként elkészített
+példányokat mentse el az erre a célra létrehozott listába!
+
+2. Feladat. Az egyes ételek esetén az energiatartalom 100gramm-ra vonatkozóan van
+megadva. Készítsen egész értékkel visszatérő függvényt, melynek neve az "F2_" prefixummal
+kezdődik, és amely kiszámítja a teljes adag energiaértékét! A függvény paramétere:
+– Egy étel objektum.
+
+3. Feladat. A hét elején rendesen odatettük magunkat és csak olyan ételeket vettünk,
+amelyek alacsony kalóriatartalommal bírnak. Ezen felbuzdulva a hét vége felé (december
+14.-től december 15.-ig) olyan ételeket tervezünk rendelni, melyek magas energiatartalommal
+bírnak. Listázza ki a mintának megfelelően az ezen időszak alatt rendelhető olyan
+ételeket, melyek teljes adagja 700kcal fölött van! Használja a 2. feladatban megírt függvényt
+Számítsa ki azt is, hogy mennyi ezek átlagos ára!
+
+3. feladat
+Fullos ételek a hét végére:
+Csokoládés karamelltorta (normál: 50 g) - 757 kcal, 1250 Ft
+Pacalpörkölt galuskával (kicsi: 300 g) - 838 kcal, 1310 Ft
+...
+A fenti ételek átlagos ára 1150 Ft.
+
+4. Feladat. Állapítsa meg, hogy melyik a drágább? A legolcsóbb kis adag rántott, vagy
+a legolcsóbb normál adag főzelék? (Feltételezheti, hogy a rendelhető ételek között van
+mindkettőből legalább egy!)
+3. feladat
+A legolcsóbb kis adag rántott a Rántott halrudi, az
+ára pedig 1170 Ft.
+A legolcsóbb normál adag főzelék a Tökfőzelék pörkölttel, az ára
+pedig 1230 Ft.
+A Tökfőzelék pörkölttel drágább.
+
+5. Feladat. Az egyes ételek tartalmazhatnak különböző allergén anyagokat, amiket a
+vásárlók bizonyos esetekben szeretnének kiszűrni. Annak eldöntésére, hogy az adott étel
+tartalmaz-e bármilyen a felhasználó számára veszélyes allergént készítsen logikai függvényt,
+melynek neve az "F5_" prefixummal kezdődik! A függvény az alábbi paraméterekkel
+rendelkezik.
+– Egy étel objektum.
+– Szöveges lista (ez tartalmazza a kiszűrni kívánt allergéneket).
+
+6. Feladat. Segítse a felhasználót abban, hogy kiszűrje a számára veszélyes ételeket!
+a) Kérje be a felhasználótól azokat az allergéneket, melyekre érzékeny és tárolja el egy
+szöveges listában őket! A bekérés végét a "-" karakterrel jelezze! Ha ezt a részfeladatot
+nem tudja implementálni, akkor mentse el egy szöveges listába a "gomba"
+és "mogyoró" kifejezéseket!
+b) A 5. feladatban implementált függvény segítségével jelenítse meg az alábbi formában
+azokat az ételeket, melyek egyik allergént sem tartalmazzák a megadottak közül!
+
+4. feladat
+Adja meg az Ön számára veszélyes allergéneket:
+gomba
+mogyoró
+-
+Az Ön számára javasolt ételek:
+Cézársaláta - allergének: tojás,zeller
+Lencsefőzelék - allergének: tej
+...
+
+7. Feladat. Írjon szöveges listával visszatérő függvényt, amely listába gyűjti az ételek
+kategóriáit! A függvény neve az "F7_" prefixummal kezdődjön!
+a) A függvénynek egyetlen paramétere van, egy ételeket tartalmazó lista.
+b) A kategóriák kigyűjtésekor mindegyiket csak egyszer helyezze el a listában!
+c) A kategóriákat rendezve adja vissza!
+
+8. Feladat. A 7. feladatban megírt függvény felhasználásával gyűjtse ki az ételek kategóriáit
+egy Ön által létrehozott listába!
+Kategóriánként írja ki a képernyőre a legalacsonyabb teljes adagra vonatkozó energiatartalommal
+rendelkező ételt! Csak azokat vegye figyelembe, amelyek nem tartalmaznak
+gombát! (Feltételezheti, hogy minden kategóriában van ilyen!)
+
+8. feladat
+leves: Zöldborsó leves (300 gramm), 275 kcal - 890 Ft
+desszert: Málnás ropogós (120 gramm), 283 kcal - 690 Ft
+rántott: Rántott kelkáposzta, barna rizs (300 gramm), 568 kcal - 1250 Ft
+...
+Extra feladat. Tervezze meg a jövő heti menüt! Napi bontásban készítsen olyan listát,
+mely tartalmaz
+– levest,
+– véletlenszerűen salátát, rántottat vagy főzeléket, és
+– desszertet.
+Minden esetben a legolcsóbbat válassza! Írja ki a napi összegeket, és a heti menü teljes
+árát!
+
+9. feladat
+Hétfő (2390 Ft)
+leves: Gyümölcsleves - 730 Ft
+rántott: Rántott halrudi krumplipürével - 1170 Ft
+desszert: Lekváros palacsinta - 490 Ft
+Kedd (2290 Ft)
+leves: Zöldborsóleves - 710
+főzelék: Tökfőzelék fasírozottal - 950 Ft
+desszert: Piskótakocka pudinggal - 630 Ft
+...
+A heti menü teljes ára 16370 Ft.
+
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
